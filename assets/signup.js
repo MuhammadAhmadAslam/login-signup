@@ -10,6 +10,7 @@ let loginPasswordInput = document.getElementById('loginPasswordInput')
 let LoginEmailInput = document.getElementById('LoginEmailInput')
 SignUpButton.addEventListener('click', function (event) {
 if (userName.value == '' || userEmail.value == '' || mobileNumber.value == '' || password.value == '') {
+    event.preventDefault()
     forText.innerText = 'Please fill in this form'
 }else{
         localStorage.setItem('User Name', userName.value);
@@ -21,8 +22,11 @@ if (userName.value == '' || userEmail.value == '' || mobileNumber.value == '' ||
         mobileNumber.value = '';
         password.value = '';
         event.preventDefault();
-        window.open('assets/login.html');
+        window.location.href= 'assets/login.html'
+        // window.open('assets/login.html');
         // window.location.assign('assets/login.html');
         console.log('Sign up successful');
     }
 });
+
+

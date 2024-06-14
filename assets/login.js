@@ -15,11 +15,21 @@ loginButton.addEventListener('click', (event) => {
         event.preventDefault();
         alert('Login successful');
         window.location.href = 'dashboard.html'
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "You Are Regiesterd Successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
     } else {
         event.preventDefault();
         console.log('Login failed');
+        forText.innerText = 'Please fill in this form'
     }
 });
+
+
 // SignUpButton.addEventListener('click', function (event) {
 // if (userName.value == '' || userEmail.value == '' || mobileNumber.value == '' || password.value == '') {
 //     forText.innerText = 'Please fill in this form'
