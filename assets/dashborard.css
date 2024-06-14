@@ -6,9 +6,30 @@ body{
     color: white;
     font-family: 'Jost', sans-serif;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+}
 div{
     width: 100%;
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
     align-items: center;
+}
+button{
+    width: 10%;
+	height: 40px;
+	justify-content: center;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 10px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
 }

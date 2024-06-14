@@ -67,7 +67,10 @@ button{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
-
+#text{
+	text-align: center;
+	color: #e0dede;
+}
 button:hover{
 	background: #6d44b8;
 }
