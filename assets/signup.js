@@ -13,6 +13,7 @@ if (userName.value == '' || userEmail.value == '' || mobileNumber.value == '' ||
     event.preventDefault()
     forText.innerText = 'Please fill in this form'
 }else{
+        
         localStorage.setItem('User Name', userName.value);
         localStorage.setItem('User Email', userEmail.value);
         localStorage.setItem('Mobile Number', mobileNumber.value);
@@ -29,4 +30,27 @@ if (userName.value == '' || userEmail.value == '' || mobileNumber.value == '' ||
     }
 });
 
+
+
+
+password.addEventListener('input' , ()=> {
+    let num = document.getElementsByClassName('num')
+    let upper = document.getElementsByClassName('upper')
+    let Special = document.getElementsByClassName('Special')
+    let length = document.getElementsByClassName('length')
+
+    let passwordValue = password.value; 
+    let symbols = ['!',"@",'#',"%","$","&"]
+for (let i = 0; i < symbols.length; i++) {
+    for (let j = 0; j <= 9; j++) {
+    if (passwordValue.length > 12 ||  passwordValue.includes(passwordValue.toUpperCase()) && passwordValue.includes(j.toString()) && passwordValue.includes(symbols[i])) {
+            length[0].innerHTML = `<i class="fa-solid fa-circle-check " style="font-size: 14px; color: green; "></i>  Passowrd Length Must Be Greater Than 12 `
+         upper[0].innerHTML = `<i class="fa-solid fa-circle-check " style="font-size: 14px; color: green; "></i> Passowrd Must Contain Upper Case Alphabhet (A-Z) `
+         num[0].innerHTML = `<i class="fa-solid fa-circle-check " style="font-size: 14px; color: green; "></i> Passowrd Must Contain Number (0-9)`
+        Special[0].innerHTML = `<i class="fa-solid fa-circle-check " style="font-size: 14px; color: green; "></i> Passowrd Must Contain Special Character `
+    }
+}
+    }
+
+})
 

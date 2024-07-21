@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignUp</title>
     <link rel="stylesheet" href="assets/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
@@ -20,6 +21,12 @@
 					<input type="email" name="email" id="userEmail" placeholder="Email">
 					<input type="number" name="Mobile Number" placeholder="Mobile Number" id="mobileNumber">
 					<input type="password" name="pswd" placeholder="Password" id="password">
+					<ul>
+						<li class="num"><s><i class="fa-solid fa-circle-xmark " style="font-size: 14px; color: green; "></i> Passowrd Must Contain Number (0-9) </s></li>
+						<li class="upper"><s><i class="fa-solid fa-circle-xmark" style="font-size: 14px; color: green; "></i> Passowrd Must Contain Upper Case Alphabhet (A-Z) </s></li>
+						<li class="Special"><s><i class="fa-solid fa-circle-xmark " style="font-size: 14px; color: green; "></i> Passowrd Must Contain Special Character </s></li>
+						<li class="length"><s><i class="fa-solid fa-circle-xmark " style="font-size: 14px; color: green; "></i> Passowrd Length Must Be Greater Than 12 </s></li>
+					</ul>
 					<button id="SignUpButton">Sign up</button>
 					<p id="text"></p>
 				</form>
